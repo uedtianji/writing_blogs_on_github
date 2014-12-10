@@ -31,7 +31,7 @@
           <h1>
 <a id="如何使用github-pages写博客" class="anchor" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8github-pages%E5%86%99%E5%8D%9A%E5%AE%A2" aria-hidden="true"><span class="octicon octicon-link"></span></a>如何使用Github pages写博客</h1>
 
-<p><strong>为什么要用Github搭建博客？</strong>  </p>
+<p><strong>为什么要用Github pages搭建博客？</strong>  </p>
 
 <p><strong>免费</strong>，虽然csdn、cnblog也是免费的，但是那种只提供在线编辑，不能随意修改页面样式的网站当然没法满足我们这种折腾惯了的个人站长。用wordpress自己搭建网站，租用服务器也是一笔费用。而github可以随意定制、指定自己的域名，完全满足个人站长的需求，关键是完全免费。  </p>
 
@@ -39,7 +39,8 @@
 
 <p><strong>Github pages 无法实现什么功能？</strong>  </p>
 
-<p>文章评论，github pages只支持静态页面的展示，虽然浏览器端可以使用javascript控制逻辑，但是缺少服务器端语言的支持，所以无法处理提交的评论。好在我们可以使用第三方的评论插件，如<a href="http://duoshuo.com/">多说</a>、<a href="http://www.uyan.cc/">友言</a>等。这些第三方评论插件将评论上传到他们的服务器上，这样便于管理还可以使用他们的垃圾评论过滤器，更加的方便、安全。  </p>
+<p>文章评论，github pages只支持静态页面的展示，虽然浏览器端可以使用javascript控制逻辑，但是缺少服务器端语言的支持，所以无法处理提交的评论。好在我们可以使用第三方的评论插件，如<a href="http://duoshuo.com/">多说</a>、<a href="http://www.uyan.cc/">友言</a>等。这些第三方评论插件将评论上传到他们的服务器上，这样便于管理还可以使用他们的垃圾评论过滤器，更加的方便、安全。<br>
+如果只是想用github记录文字，也可以不用如此麻烦的生成Github pages，直接使用github的README.md就可以。使用方法参见<a href="http://ued.sexy/1418200719083.html">如何使用Github中的README.md写博客文章</a>  </p>
 
 <h4>
 <a id="步骤" class="anchor" href="#%E6%AD%A5%E9%AA%A4" aria-hidden="true"><span class="octicon octicon-link"></span></a>步骤</h4>
@@ -71,7 +72,7 @@
 
 <p>5.修改页面。修改<code>master</code>(个人主页)或者<code>gh-pages</code>(项目主页)中的html文件就可以修改页面内容了，页面中的路径使用的相对路径，相对的目录是项目根目录。  </p>
 
-<p>6.github默认用来生成静态文件的工具是<code>jekyll</code>,jekyll是用Ruby编写，用不惯的可以尝试下使用我自己编写的<code>githubpress</code>使用nodejs编写。</p>
+<p>6.github默认用来生成静态文件的工具是<code>jekyll</code>,jekyll是用Ruby编写，用不惯的可以尝试下使用我自己编写的<code>githubpress</code>使用nodejs编写,<a href="https://github.com/cyclegtx/githubpress">项目地址</a>。</p>
 
 <p>7.绑定域名。在<code>master</code>(个人主页)或者<code>gh-pages</code>(项目主页)版本库下新建名字为CNAME的文本文件，注意无扩展名,内容为域名，如：ued.sexy。然后在你的域名提供商那里添加A记录或者cname到github的ip<code>192.30.252.153</code>、<code>192.30.252.154</code>,然后等待生效就可以用你自己的域名访问了。</p>
         </section>
