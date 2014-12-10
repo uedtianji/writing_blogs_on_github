@@ -18,13 +18,24 @@
 >个人主页的页面文件存放在```master```分支下
 >项目主页的页面文件存放在```gh-pages```分支下
 
-2. 在项目目录中进入```Settings```  
+2. 如果是**项目主页**，在项目目录中进入```Settings```  
 ![](https://raw.githubusercontent.com/uedtianji/writing_blogs_on_github/master/images/1.jpg)  
 在settings中的```Github pages```点击```Automatic page generator```进入页面编辑。  
 ![](https://raw.githubusercontent.com/uedtianji/writing_blogs_on_github/master/images/2.jpg)  
 在页面编辑中建议使用```Load README.md```来将README.md中的内容加载到页面中。  
 ![](https://raw.githubusercontent.com/uedtianji/writing_blogs_on_github/master/images/3.jpg)  
-选择模版样式后完毕。  
+选择模版样式后，github将建好```gh-pages```分支。  
+![](https://raw.githubusercontent.com/uedtianji/writing_blogs_on_github/master/images/4.jpg) 
+
+3.如果是**个人主页**，则不需要进入```Settings```，github将会在```master```分支中建好页面静态文件。  
+
+4.访问```http://username.github.io```(个人主页)或者```http://username.github.io/项目名称```(项目主页)就可以访问页面了。  
+
+5.修改页面。修改```master```(个人主页)或者```gh-pages```(项目主页)中的html文件就可以修改页面内容了，页面中的路径使用的相对路径，相对的目录是项目根目录。  
+
+6.github默认用来生成静态文件的工具是```jekyll```,jekyll是用Ruby编写，用不惯的可以尝试下使用我自己编写的```githubpress```使用nodejs编写。
+
+7.绑定域名。在```master```(个人主页)或者```gh-pages```(项目主页)版本库下新建名字为CNAME的文本文件，注意无扩展名,内容为域名，如：ued.sexy。然后在你的域名提供商那里添加A记录或者cname到github的ip```192.30.252.153```、```192.30.252.154```,然后等待生效就可以用你自己的域名访问了。
 
 
 
