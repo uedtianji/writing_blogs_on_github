@@ -1,37 +1,34 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Writing blogs on GitHub : 如何使用github pages写博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-    <title>Writing blogs on GitHub</title>
+    <title>Writing blogs on GitHub by uedtianji</title>
   </head>
 
   <body>
+    <header>
+      <div class="inner">
+        <h1>Writing blogs on GitHub</h1>
+        <h2>如何使用github pages写博客</h2>
+        <a href="https://github.com/uedtianji/writing_blogs_on_github" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/uedtianji/writing_blogs_on_github">View on GitHub</a>
-
-          <h1 id="project_title">Writing blogs on GitHub</h1>
-          <h2 id="project_tagline">如何使用github pages写博客</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/uedtianji/writing_blogs_on_github/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/uedtianji/writing_blogs_on_github/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
 <a id="如何使用github-pages写博客" class="anchor" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8github-pages%E5%86%99%E5%8D%9A%E5%AE%A2" aria-hidden="true"><span class="octicon octicon-link"></span></a>如何使用Github pages写博客</h1>
 
 <p><strong>为什么要用Github搭建博客？</strong>  </p>
@@ -40,21 +37,62 @@
 
 <p><strong>Markdown</strong>便捷的文章书写体验,虽然 zblog、wordpress安装插件也可以支持markdown语法，但是github的README.md一直使用markdown语法直接显示在项目的页面中，使用markdown的支持更方便。  </p>
 
-<p>*<em>Github pages 无法实现什么功能？  *</em></p>
+<p><strong>Github pages 无法实现什么功能？</strong>  </p>
 
 <p>文章评论，github pages只支持静态页面的展示，虽然浏览器端可以使用javascript控制逻辑，但是缺少服务器端语言的支持，所以无法处理提交的评论。好在我们可以使用第三方的评论插件，如<a href="http://duoshuo.com/">多说</a>、<a href="http://www.uyan.cc/">友言</a>等。这些第三方评论插件将评论上传到他们的服务器上，这样便于管理还可以使用他们的垃圾评论过滤器，更加的方便、安全。  </p>
-      </section>
+
+<h4>
+<a id="步骤" class="anchor" href="#%E6%AD%A5%E9%AA%A4" aria-hidden="true"><span class="octicon octicon-link"></span></a>步骤</h4>
+
+<ol>
+<li>
+<p>新建repository<br>
+这里要注意项目名称。如果项目名称是<code>username.github.com</code>或<code>username.github.io</code>,其中<code>username</code>为你的github名称或者组织名称，则生成的github pages是<code>个人主页</code>。如果项目名称为其他名称则是<code>项目主页</code>。<br>
+个人主页和项目主页的区别:    </p>
+
+<blockquote>
+<p>个人主页的页面文件存放在<code>master</code>分支下
+项目主页的页面文件存放在<code>gh-pages</code>分支下</p>
+</blockquote>
+</li>
+<li><p>如果是<strong>项目主页</strong>，在项目目录中进入<code>Settings</code><br>
+<img src="https://raw.githubusercontent.com/uedtianji/writing_blogs_on_github/master/images/1.jpg" alt=""><br>
+在settings中的<code>Github pages</code>点击<code>Automatic page generator</code>进入页面编辑。<br>
+<img src="https://raw.githubusercontent.com/uedtianji/writing_blogs_on_github/master/images/2.jpg" alt=""><br>
+在页面编辑中建议使用<code>Load README.md</code>来将README.md中的内容加载到页面中。<br>
+<img src="https://raw.githubusercontent.com/uedtianji/writing_blogs_on_github/master/images/3.jpg" alt=""><br>
+选择模版样式后，github将建好<code>gh-pages</code>分支。<br>
+<img src="https://raw.githubusercontent.com/uedtianji/writing_blogs_on_github/master/images/4.jpg" alt=""> </p></li>
+</ol>
+
+<p>3.如果是<strong>个人主页</strong>，则不需要进入<code>Settings</code>，github将会在<code>master</code>分支中建好页面静态文件。  </p>
+
+<p>4.访问<code>http://username.github.io</code>(个人主页)或者<code>http://username.github.io/项目名称</code>(项目主页)就可以访问页面了。  </p>
+
+<p>5.修改页面。修改<code>master</code>(个人主页)或者<code>gh-pages</code>(项目主页)中的html文件就可以修改页面内容了，页面中的路径使用的相对路径，相对的目录是项目根目录。  </p>
+
+<p>6.github默认用来生成静态文件的工具是<code>jekyll</code>,jekyll是用Ruby编写，用不惯的可以尝试下使用我自己编写的<code>githubpress</code>使用nodejs编写。</p>
+
+<p>7.绑定域名。在<code>master</code>(个人主页)或者<code>gh-pages</code>(项目主页)版本库下新建名字为CNAME的文本文件，注意无扩展名,内容为域名，如：ued.sexy。然后在你的域名提供商那里添加A记录或者cname到github的ip<code>192.30.252.153</code>、<code>192.30.252.154</code>,然后等待生效就可以用你自己的域名访问了。</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/uedtianji/writing_blogs_on_github/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/uedtianji/writing_blogs_on_github/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/uedtianji/writing_blogs_on_github"></a> is maintained by <a href="https://github.com/uedtianji">uedtianji</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Writing blogs on GitHub maintained by <a href="https://github.com/uedtianji">uedtianji</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
+  
   </body>
 </html>
